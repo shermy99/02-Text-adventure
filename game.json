@@ -1,21 +1,62 @@
 {
 	"START": {
-		"name": "",
-		"desc": "",
+		"name": "Forest",
+		"desc": "You wake up in a dense forest. You have no memory of how you got here, but you know that you must figure out what happened. You are surrounded by trees on all sides",
 		"exits": [
 			{
-				"exit": "EXIT1",
-				"target": "LOCATION2"
+				"exit": "NORTH",
+				"target": "FIELD1"
+			}, {
+				"exit": "SOUTH",
+				"target": "CAVM"
 			}
 		]
 	}
-	,"LOCATION2": {
-		"name": "",
-		"desc": "",
+	,"CAVM": {
+		"name": "Cave mouth",
+		"desc": "After walking for what you think was around half an hour, you arive at a large mouth of a cave. South would lead you into the cave which you can see some sort of light in, and north would lead you back to where you started. Steep cliff faces flank your east and west",
 		"exits": [
 			{
-				"exit": "EXIT1",
+				"exit": "SOUTH",
+				"target": "CAV1"
+			}, {
+				"exit": "NORTH",
 				"target": "START"
+			}
+		]
+	}
+	,"FIELD1": {
+		"name": "Field",
+		"desc": "After what felt like an hour of walking, you exit the forest and find yourself in an empty field. To the West you spot a house off in the distance. To the north is more empty field. To the east you see a mountain. South leads back into the forest.",
+		"exits": [
+			{
+				"exit": "EAST",
+				"target": "EHOUSE"
+			}, {
+				"exit": "NORTH",
+				"target": "FIELD2"
+			}, {
+				"exit": "SOUTH",
+				"target": "START"
+			}
+		]
+	}
+	,"SHOUSE": {
+		"name": "East wall of the house",
+		"desc": "After walking towards the house for a while, you finally arrive at it. It is a standard looking farm house, and you are looking at its front door.",
+		"exits": [
+			{
+				"exit": "EAST",
+				"target": "HOUSEIN"
+			}, {
+				"exit": "WEST",
+				"target": "FIELD1"
+			}, {
+				"exit": "SOUTH",
+				"target": "SHOUSE"
+			}, {
+				"exit": "NORTH",
+				"target": "NHOUSE"
 			}
 		]
 	}
