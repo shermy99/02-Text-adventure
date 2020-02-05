@@ -18,10 +18,99 @@
 		"exits": [
 			{
 				"exit": "SOUTH",
-				"target": "CAV1"
+				"target": "CAVE"
 			}, {
 				"exit": "NORTH",
 				"target": "START"
+			}
+		]
+	}
+	,"CAVE": {
+		"name": "Cave Entrance",
+		"desc": "You decide to walk into the entrance of the cave and look around. It seems like a rather natural cave, nothing to be seen. Suddenly, the cave entrance behind you collapses, leaving you trapped. You can only move south, towards the camp fire.",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "CAVM2"
+			}, {
+				"exit": "SOUTH",
+				"target": "FIRE"
+			}
+		]
+	}
+	,"CAVM2": {
+		"name": "collapsed entrance",
+		"desc": "You can not go any further this way, the mouth of the cave has collapsed. You must go South",
+		"exits": [
+			{
+				"exit": "SOUTH",
+				"target": "FIRE"
+			}
+		]
+	}
+	,"FIRE": {
+		"name": "campfire in the cave",
+		"desc": "Only being able continue deeper into the cave, you arrive at the campfire, where an old man is sitting. He grins and casts a spell on you, causing you to succumb to unconsciousness. Move North to continue",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "UNCOS1"
+			}, {
+				"exit": "SOUTH",
+				"target": "UNCOSFT"
+			}, {
+				"exit": "EAST",
+				"target": "UNCOSFT"
+			}, {
+				"exit": "WEST",
+				"target": "UNCOSFT"
+			}
+		]
+	}
+	,"UNCOSFT": {
+		"name": "Fighting unconsciousness",
+		"desc": "You do your best to try and fight the old man's spell, but his magic is too strong. You can't resist the feeling of unconsciousness any longer.",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "UNCOS1"
+			}, {
+				"exit": "EAST",
+				"target": "UNCOSFT"
+			}, {
+				"exit": "SOUTH",
+				"target": "UNCOSFT"
+			}, {
+				"exit": "WEST",
+				"target": "UNCOSFT"
+			}
+		]
+	}
+	,"UNCOS1": {
+		"name": "unconsciousness",
+		"desc": "You are swimming around in the black void of unconsciousness. It feels as if you are in a dream. After a while, you notice a faint light to the north of you, lightly pulling you towards it.",
+		"exits": [
+			{
+				"exit": "NORTH",
+				"target": "SKY"
+			}, {
+				"exit": "SOUTH",
+				"target": "UNCOS1"
+			}, {
+				"exit": "SOUTH",
+				"target": "UNCOS1"
+			}, {
+				"exit": "SOUTH",
+				"target": "UNCOS1"
+			}
+		]
+	}
+	,"SKY": {
+		"name": "carriage",
+		"desc": "You swam towards the light, but as you got closer, it got colder. eventually you slowly woke up and let out a groan. You then Hear a man talk to you. 'Hey, you!. Youre finally awake. You were trying to cross the border, right? Walked right into that Imperial ambush, same as us, and that thief over there'",
+		"exits": [
+			{
+				
 			}
 		]
 	}
@@ -30,8 +119,8 @@
 		"desc": "After what felt like an hour of walking, you exit the forest and find yourself in an empty field. To the West you spot a house off in the distance. To the north is more empty field. To the east you see a mountain. South leads back into the forest.",
 		"exits": [
 			{
-				"exit": "EAST",
-				"target": "EHOUSE"
+				"exit": "WEST",
+				"target": "WHOUSE"
 			}, {
 				"exit": "NORTH",
 				"target": "FIELD2"
@@ -47,9 +136,28 @@
 		"exits": [
 			{
 				"exit": "EAST",
-				"target": "HOUSEIN"
+				"target": "FIELD3"
 			}, {
 				"exit": "WEST",
+				"target": "FIELD1"
+			}, {
+				"exit": "SOUTH",
+				"target": "FOR3"
+			}, {
+				"exit": "NORTH",
+				"target": "HOUSEWIN"
+			}
+		]
+	}
+	,"WHOUSE": {
+		"name": "East wall of the house",
+		"desc": "After walking towards the house for a while, you finally arrive at it. It is a standard looking farm house, and you are looking at its front door.",
+		"exits": [
+			{
+				"exit": "WEST",
+				"target": "HOUSEIN"
+			}, {
+				"exit": "EAST",
 				"target": "FIELD1"
 			}, {
 				"exit": "SOUTH",
